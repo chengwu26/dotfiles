@@ -1,0 +1,24 @@
+[user]
+  name = kanggui
+  email = kg.he@outlook.com
+
+[core]
+  compression = 9
+  pager = delta
+
+[status]
+  branch = true
+  showStash = true
+
+[init]
+	defaultBranch = master
+
+[merge]
+  conflictstyle = zdiff3
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  navigate = true
+  dark = true
