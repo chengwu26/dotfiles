@@ -71,7 +71,9 @@ zinit light jeffreytse/zsh-vi-mode
 # ╰──────────────────────────────────────────────────────────╯
 
 bindkey -v
-setopt prompt_subst
+bindkey -M vicmd 'j' down-line-or-search
+bindkey -M vicmd 'k' up-line-or-search
+
 # History
 HISTSIZE=5000
 SAVEHIST=$HISTSIZE
@@ -133,7 +135,7 @@ print -P "${yellow}$0 ${blue}$(uptime -p | cut -c 4-) ${lavender}$(uname -r)"
 alias so="source ${ZDOTDIR:-$HOME}/.zshrc"
 alias c='clear'
 alias ls='ls --color'
-alias ll='ls -al --color'
+alias ll='ls -Al --color'
 alias ff='fastfetch'
 
 alias ffmpeg='ffmpeg -hide_banner'
@@ -141,19 +143,5 @@ alias ffmpeg='ffmpeg -hide_banner'
 # Git
 alias dot='git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 
-alias gcl='git clone'
-
-alias gs='git status --short'
-alias gd='git diff'
-
-alias gl='git log --oneline --graph'
-alias gch='git checkout'
-alias gb='git branch'
-
 alias ga='git add'
-
-alias gf='git fetch'
-alias gu='git pull'
-
-alias gm='git merge'
-alias gr='git rebase'
+alias gd='git diff'

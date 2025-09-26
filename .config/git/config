@@ -2,23 +2,71 @@
   name = kanggui
   email = kg.he@outlook.com
 
+[alias]
+  st = status -s
+  lol = log --oneline --graph --all
+
 [core]
   compression = 9
   pager = delta
+
+[init]
+  defaultBranch = main
+
+[column]
+  ui = auto
 
 [status]
   branch = true
   showStash = true
 
-[init]
-	defaultBranch = master
+[branch]
+  sort = -committerdate
+
+[tag]
+  sort = version:refname
+
+[diff]
+  algorithm = histogram
+  colorMoved = default
+  mnemonicPrefix = true
+  renames = true
+
+[push]
+  default = simple
+  autoSetupRemote = true
+  followTags = true
+
+[pull]
+  rebase = true
+
+[commit]
+  verbose = true
 
 [merge]
-  conflictstyle = zdiff3
+  conflictStyle = zdiff3
 
-[interactive]
-  diffFilter = delta --color-only
+[rebase]
+  # autoSquash = true
+  # autoStash = true
+  # updateRef = true
 
 [delta]
   navigate = true
   dark = true
+  features = line-numbers decorations
+  syntax-theme = Dracula
+  plus-style = syntax "#003800"
+  minus-style = syntax "#3f0001"
+
+[delta "decorations"]
+  commit-decoration-style = bold yellow box ul
+  file-style = bold yellow ul
+  file-decoration-style = none
+  hunk-header-decoration-style = cyan box ul
+
+[delta "line-numbers"]
+  line-numbers-left-style = cyan
+  line-numbers-right-style = cyan
+  line-numbers-minus-style = 124
+  line-numbers-plus-style = 28
