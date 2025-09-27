@@ -100,7 +100,7 @@ zstyle ':completion:*' menu no
 # Integrations
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(fzf --zsh)"
-FZF_DEFAULT_OPTS='--tmux bottom'
+export FZF_DEFAULT_OPTS='--height ~40% --tmux bottom --border'
 
 
 # ╭──────────────────────────────────────────────────────────╮
