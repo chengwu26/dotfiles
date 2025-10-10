@@ -20,6 +20,9 @@ apps=(
   neovim git tree-sitter-cli gcc yarn npm ripgrep fd unzip inotify-tools 
 )
 
+pacman-key --init
+pacman-key --populate archlinux
+
 pacman -Syyu --noconfirm "${apps[@]}"
 exec zsh
 
