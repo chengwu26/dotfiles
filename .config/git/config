@@ -3,7 +3,7 @@
   email = kg.he@outlook.com
 
 [alias]
-  st = status -s
+  st = status -s --show-stash
   lol = log --oneline --graph --all
 
 [core]
