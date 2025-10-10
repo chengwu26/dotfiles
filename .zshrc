@@ -9,6 +9,8 @@ export MANPAGER='nvim +Man!'
 export MANWIDTH=$((COLUMNS - 3))
 trap 'MANWIDTH=$((COLUMNS - 3))' WINCH
 
+export DEV_ENV=true
+
 # XDG Base Directories
 export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_DATA_HOME="$HOME/.local/share"
