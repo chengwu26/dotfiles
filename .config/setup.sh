@@ -41,9 +41,7 @@ pacman -Syu --noconfirm --needed "${apps[@]}"
 info 'Install rust toolchain'
 rustup toolchain install stable
 
-info 'Clone dotfiles repo'
+info 'Clone repositories'
 gitclone dotfiles ~/.dotfiles true
 git --git-dir=${HOME}/.dotfiles --work-tree=${HOME} reset --hard
-
-info 'Clone nvim repo'
 gitclone nvim "${HOME}/.config/nvim"
