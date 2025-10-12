@@ -43,5 +43,5 @@ rustup toolchain install stable
 
 info 'Clone repositories'
 gitclone dotfiles ~/.dotfiles true
-git --git-dir=${HOME}/.dotfiles --work-tree=${HOME} reset --hard
-gitclone nvim "${HOME}/.config/nvim"
+git --git-dir="${HOME}/.dotfiles" --work-tree="${HOME}" reset --hard
+gitclone nvim "${XDG_CONFIG_HOME:-${HOME}/.config}/nvim"
