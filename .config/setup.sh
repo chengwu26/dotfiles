@@ -20,20 +20,8 @@ function gitclone() {
   [[ $bare == true ]] && cmd+=(--bare)
   cmd+=("$(repo2url "$repo")" "$dir")
 
-  [[ ! -d "$dir" ]] && { "${cmd[@]}"; return;}
-  while true; do
-    read -p "The '$dir' already exists, do you want to override(y/n/q)? " opt
-    case $opt in
-      n) break;;
-      q) exit 2;;
-      y)
-        rm -rf "$dir"
-        "${cmd[@]}"
-        break
-        ;;
-      *) echo 'Invalid option';;
-    esac
-  done
+  [[ -d "$dir" ]] && rm -rf "$dir"
+  "${cmd[@]}"
 }
 
 declare -a apps=(
