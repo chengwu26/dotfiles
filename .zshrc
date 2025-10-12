@@ -142,6 +142,9 @@ alias ff='fastfetch'
 
 alias ffmpeg='ffmpeg -hide_banner'
 
+alias vi='env --argv0=vi nvim'
+alias vim='env -argv0=vim nvim'
+
 # Git
 alias dot='git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 
