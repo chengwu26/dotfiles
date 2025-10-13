@@ -2,12 +2,11 @@
 # │                Environment Variable                      │
 # ╰──────────────────────────────────────────────────────────╯
 
+vim='env --argv0=vim nvim'
 # Basic
-export EDITOR=nvim
-export VISUAL=nvim
-export MANPAGER='nvim +Man!'
-export MANWIDTH=$((COLUMNS - 3))
-trap 'MANWIDTH=$((COLUMNS - 3))' WINCH
+export EDITOR="$vim"
+export VISUAL="$EDITOR"
+export MANPAGER="$vim +Man!"
 
 export DEV_ENV=true
 
@@ -143,7 +142,7 @@ alias ff='fastfetch'
 alias ffmpeg='ffmpeg -hide_banner'
 
 alias vi='env --argv0=vi nvim'
-alias vim='env -argv0=vim nvim'
+alias vim="$vim"
 
 # Git
 alias dot='git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
