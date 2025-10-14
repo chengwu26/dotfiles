@@ -8,8 +8,6 @@ export EDITOR="$vim"
 export VISUAL="$EDITOR"
 export MANPAGER="$vim +Man!"
 
-export DEV_ENV=true
-
 # XDG Base Directories
 export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_DATA_HOME="$HOME/.local/share"
