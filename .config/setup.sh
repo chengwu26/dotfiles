@@ -26,7 +26,7 @@ function gitclone() {
 
 declare -a apps=(
   sudo man-db man-pages openssh base-devel
-  zsh fzf zoxide tmux tree fastfetch ffmpeg hyperfine ripgrep fd
+  fish fzf zoxide tmux tree fastfetch ffmpeg hyperfine ripgrep fd
   uv pyright rustup git
   neovim tree-sitter-cli yarn npm unzip inotify-tools
 )
