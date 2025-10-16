@@ -23,7 +23,7 @@ set -gx NPM_CONFIG_TMP "$XDG_RUNTIME_DIR/npm"
 status is-interactive || return
 # ---- INTERACTIVE CONFIG -----
 
-# theme
+# install theme
 set -l theme "$__fish_config_dir/themes/Catppuccin Mocha.theme"
 set -l url 'https://raw.githubusercontent.com/catppuccin/fish/main/themes/Catppuccin%20Mocha.theme'
 test -f $theme || curl -sSL --create-dirs $url -o $theme && fish_config theme choose 'Catppuccin Mocha'
@@ -38,7 +38,6 @@ zoxide init --cmd cd fish | source
 fzf --fish | source
 set -x FZF_DEFAULT_OPTS '--height ~40% --tmux bottom --border'
 
-# aliases
 alias so="source $__fish_config_dir/config.fish"
 alias c='clear'
 alias ll='ls -Al'
