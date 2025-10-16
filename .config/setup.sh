@@ -25,10 +25,10 @@ function gitclone() {
 }
 
 declare -a apps=(
-  sudo man-db man-pages openssh base-devel
+  sudo man-db man-pages openssh base-devel unzip inotify-tools
   fish fzf zoxide tmux tree fastfetch ffmpeg hyperfine ripgrep fd
-  uv pyright rustup git
-  neovim tree-sitter-cli yarn npm unzip inotify-tools
+  clang lldb rustup uv pyright git
+  neovim tree-sitter-cli yarn npm
 )
 
 info 'Initialize pacman keyring'
