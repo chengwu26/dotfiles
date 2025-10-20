@@ -38,10 +38,11 @@ pacman-key --populate archlinux
 info 'Install apps'
 pacman -Syu --noconfirm --needed "${apps[@]}"
 
-info 'Install rust toolchain'
-rustup toolchain install stable
-
 info 'Clone repositories'
 gitclone dotfiles ~/.dotfiles true
 git --git-dir="${HOME}/.dotfiles" --work-tree="${HOME}" reset --hard
 gitclone nvim "${XDG_CONFIG_HOME:-${HOME}/.config}/nvim"
+
+info 'Install rust toolchain'
+exec fish
+rustup default stable
