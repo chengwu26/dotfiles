@@ -40,7 +40,6 @@ set -x FZF_DEFAULT_OPTS '--height ~40% --tmux bottom --border'
 
 alias so="source $__fish_config_dir/config.fish"
 alias c='clear'
-alias ll='ls -Al'
 alias ff='fastfetch'
 alias ffm='ffmpeg -hide_banner'
 
