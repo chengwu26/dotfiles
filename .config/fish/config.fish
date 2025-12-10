@@ -42,6 +42,7 @@ alias so="source $__fish_config_dir/config.fish"
 alias c='clear'
 alias ff='fastfetch'
 alias ffm='ffmpeg -hide_banner'
+alias ffp='ffprobe -hide_banner'
 
 alias vi='env --argv0=vi nvim'
 alias vim="$vim"
