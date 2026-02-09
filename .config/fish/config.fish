@@ -23,10 +23,7 @@ set -gx NPM_CONFIG_TMP "$XDG_RUNTIME_DIR/npm"
 status is-interactive || return
 # ---- INTERACTIVE CONFIG -----
 
-# install theme
-set -l theme "$__fish_config_dir/themes/Catppuccin Mocha.theme"
-set -l url 'https://raw.githubusercontent.com/catppuccin/fish/main/themes/Catppuccin%20Mocha.theme'
-test -f $theme || curl -sSL --create-dirs $url -o $theme && fish_config theme choose 'Catppuccin Mocha'
+fish_config theme choose catppuccin-mocha
 
 # keybind
 set fish_sequence_key_delay_ms 300
