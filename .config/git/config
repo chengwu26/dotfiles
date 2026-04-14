@@ -8,6 +8,7 @@
 
 [core]
   compression = 9
+  quotePath = false
 
 [init]
   defaultBranch = main
