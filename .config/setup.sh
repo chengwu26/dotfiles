@@ -28,7 +28,7 @@ declare -a apps=(
   sudo man-db man-pages openssh base-devel unzip inotify-tools
   fish fzf zoxide tmux tree fastfetch ffmpeg hyperfine ripgrep fd tldr
   clang lldb rustup uv pyright git
-  neovim tree-sitter-cli yarn npm
+  neovim tree-sitter-cli npm
 )
 
 info 'Initialize pacman keyring'
